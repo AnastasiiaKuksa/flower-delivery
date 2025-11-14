@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення квітів з доставкою</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f7e9ff, #fdf7ff);
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            text-align: center;
+            width: 380px;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        h3 {
+            color: #8e44ad;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .result {
+            margin-top: 25px;
+            font-size: 18px;
+            color: #2c3e50;
+            font-weight: bold;
+            padding: 10px;
+            background: #f3e8ff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h3>Підрахунок вартості замовлення квітів</h3>
+
+        <p>Букет «Весняний»: <strong>350 грн</strong></p>
+        <p>Доставка по місту: <strong>70 грн</strong></p>
+
+        <p class="result" id="total"></p>
+    </div>
+
+    <script>
+        let bouquetPrice = 350;
+        let deliveryPrice = 70;
+        let total = bouquetPrice + deliveryPrice;
+
+        // Виведення на сторінку
+        document.getElementById("total").textContent =
+            "Загальна вартість замовлення: " + total + " грн";
+
+        // Спливаюче вікно
+        alert("Загальна вартість замовлення: " + total + " грн");
+    </script>
+
+</body>
+</html>
